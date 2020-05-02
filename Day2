@@ -1,0 +1,12 @@
+def numJewelsInStones(self, J, S):
+        """
+        :type J: str
+        :type S: str
+        :rtype: int
+        """
+        jewelCount = 0
+        for stone in S:
+            for jewel in J:
+                if jewel==stone:
+                    jewelCount += 1
+        return jewelCount
