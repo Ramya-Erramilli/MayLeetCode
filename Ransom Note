@@ -5,4 +5,12 @@ class Solution(object):
         :type magazine: str
         :rtype: bool
         """
+        //Sol 1:
         return all(ransomNote.count(letter) <= magazine.count(letter) for letter in set(ransomNote))
+        
+        // Sol 2:
+        for note in ransomNote:
+            if note not in magazine:
+                return False
+            magazine = magazine.replace(note,'',1)
+        return True
