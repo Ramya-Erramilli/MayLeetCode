@@ -1,0 +1,8 @@
+class Solution(object):
+    def canConstruct(self, ransomNote, magazine):
+        """
+        :type ransomNote: str
+        :type magazine: str
+        :rtype: bool
+        """
+        return all(ransomNote.count(letter) <= magazine.count(letter) for letter in set(ransomNote))
