@@ -1,0 +1,14 @@
+class Solution(object):
+    def findComplement(self, num):
+        """
+        :type num: int
+        :rtype: int
+        """
+        binary = "{0:b}".format(num) 
+        complementBin  = ""
+        for i in binary:
+            j = "0" if i=="1" else "1"
+            complementBin += j
+ 
+        return int(complementBin,2)
+        
